@@ -14,5 +14,9 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true
   },
-  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.gif', '**/*.svg']
+  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.gif', '**/*.svg'],
+  server: {
+    port: 5173,
+    open: true
+  }
 });
