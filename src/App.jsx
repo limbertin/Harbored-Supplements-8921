@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Cart from './pages/Cart';
+import About from './pages/About';
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -44,16 +45,14 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products onAddToCart={addToCart} />} />
-            <Route 
-              path="/cart" 
-              element={
-                <Cart 
-                  items={cartItems}
-                  updateQuantity={updateQuantity}
-                  removeItem={removeItem}
-                />
-              } 
-            />
+            <Route path="/cart" element={
+              <Cart 
+                items={cartItems}
+                updateQuantity={updateQuantity}
+                removeItem={removeItem}
+              />
+            } />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
       </div>

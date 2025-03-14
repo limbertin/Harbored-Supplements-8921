@@ -4,19 +4,23 @@ import { Link } from 'react-router-dom';
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <div className="relative h-[80vh] bg-cover bg-center" 
-           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80)' }}>
+      <div 
+        className="relative h-[80vh] bg-cover bg-center"
+        style={{ 
+          backgroundImage: 'url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")'
+        }}
+      >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl font-bold mb-4"
             >
               HARBORED
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -29,7 +33,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <Link 
+              <Link
                 to="/products"
                 className="bg-green-600 text-white px-8 py-3 rounded-md hover:bg-green-700 transition-colors"
               >
